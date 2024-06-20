@@ -1,0 +1,55 @@
+<html>
+<head>
+<title>Login</title>
+</head>
+<style>
+    body {
+      background-image: url('s.jpg');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+    }
+    </style>
+<body style="background-color:white;">
+<center>
+<div><p id="para1">
+<form action="" onsubmit="return checkmail()" method="post">
+<table style="border:5px solid black;">
+<tr>
+<br><td colspan="2"><center><h2>REGISTER</h2></center><br></td></tr><tr>
+<td><h3><label for="name">Enter Name:</label></h3></td>
+<td><input type="text" id="name" ></td></tr><tr>
+<td><h3><label for="phone">Enter Phone:</label></h3></td>
+<td><input type="text" id="phone" ></td></tr><tr>
+<td><h3><label for="mail">Enter E-mail:</label></h3></td>
+<td><input type="text" id="mail" ></td></tr><tr>
+<td><h3><label for="password">Password:</label></h3></td>
+<td><input type="password" id="password" name="password" maxlength="8"></td></tr><tr>
+<td colspan="2"><input type="submit" class="press"></td></tr>
+</table></form> 
+<script>
+function checkmail()
+{
+    var mail=document.getElementById("mail").value;
+    var x=document.getElementById("mail").value;
+    var at=x.indexOf("@");
+    var dot=x.indexOf(".");
+    if(mail.indexOf("@")==-1||mail.indexOf(".")==-1||at<1||dot< at+2||dot+2>=mail.length)
+        alert(mail +" email is not valid. Recheck");
+    else
+alert("Your email is valid. Click OK");
+var num=document.getElementById("phone").value;
+var pattern=/^\d{10}$/;
+if(pattern.test(num))
+    alert(" Your registeration is successful.");
+    else
+alert(num+" Mobile no. is not valid. Recheck");
+}
+</script>
+</body>
+<footer>
+
+<b><a href="index.html">Click here to go to home page</a></b><br>
+<b><a href="booking.html">Click here to go to book now page</a></b>
+</footer>
+</html>
